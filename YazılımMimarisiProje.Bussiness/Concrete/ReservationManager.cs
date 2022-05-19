@@ -22,13 +22,15 @@ namespace YazılımMimarisiProje.Bussiness.Concrete
         {
             return _reservationDal.GetAll();
         }
-        public void Add(ReservationInformation reservationInformation)
-        {
-            _reservationDal.Add(reservationInformation);
-        }
+
         public void Delete(string ReservationEmail)
         {
             _reservationDal.Delete(ReservationEmail);
+        }
+
+        public void Add(ReservationInformation reservationInformation,Booker booker)
+        {
+            _reservationDal.Add(reservationInformation,booker);
         }
     }
 

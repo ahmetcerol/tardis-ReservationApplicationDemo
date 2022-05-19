@@ -33,5 +33,60 @@ namespace YazılımMimarisiProje.DataAccess.Properties {
                 return ((string)(this["TardisDataConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"|DataDirectory|\\New Database" +
+            ".mdf\";Integrated Security=True;Connect Timeout=30")]
+        public string New_DatabaseConnectionString {
+            get {
+                return ((string)(this["New_DatabaseConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\hp\\ReservationDataba" +
+            "se.mdf;Integrated Security=True;Connect Timeout=30")]
+        public string ReservationDatabaseConnectionString {
+            get {
+                return ((string)(this["ReservationDatabaseConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\TardisDatabas" +
+            "e.mdf;Integrated Security=True;Connect Timeout=30")]
+        public string TardisDatabaseConnectionString {
+            get {
+                return ((string)(this["TardisDatabaseConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\RezervasyonBi" +
+            "lgileri.mdf;Integrated Security=True;Connect Timeout=30")]
+        public string RezervasyonBilgileriConnectionString {
+            get {
+                return ((string)(this["RezervasyonBilgileriConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\SoftwareArchi" +
+            "tecture.mdf;Integrated Security=True;Connect Timeout=30")]
+        public string SoftwareArchitectureConnectionString {
+            get {
+                return ((string)(this["SoftwareArchitectureConnectionString"]));
+            }
+        }
     }
 }

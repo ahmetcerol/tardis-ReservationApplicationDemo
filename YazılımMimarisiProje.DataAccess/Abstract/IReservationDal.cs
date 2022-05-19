@@ -9,5 +9,6 @@ namespace YazılımMimarisiProje.DataAccess.Abstract
 {
     public interface IReservationDal:ISqlRepository<ReservationInformation>
     {
+        void Add(ReservationInformation reservationInformation,Booker booker);
     }
 }

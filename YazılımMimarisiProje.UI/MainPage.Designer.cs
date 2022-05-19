@@ -199,9 +199,9 @@ namespace YazılımMimarisiProje.UI
             // 
             this.pnlChildForms.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlChildForms.Controls.Add(this.pbxTent);
-            this.pnlChildForms.Controls.Add(this.pbxHotel);
             this.pnlChildForms.Controls.Add(this.lblAboutTardis);
             this.pnlChildForms.Controls.Add(this.pbxMainChildForm);
+            this.pnlChildForms.Controls.Add(this.pbxHotel);
             this.pnlChildForms.Location = new System.Drawing.Point(155, 41);
             this.pnlChildForms.Name = "pnlChildForms";
             this.pnlChildForms.Size = new System.Drawing.Size(633, 397);
@@ -220,7 +220,7 @@ namespace YazılımMimarisiProje.UI
             // pbxHotel
             // 
             this.pbxHotel.Image = ((System.Drawing.Image)(resources.GetObject("pbxHotel.Image")));
-            this.pbxHotel.Location = new System.Drawing.Point(70, 156);
+            this.pbxHotel.Location = new System.Drawing.Point(72, 156);
             this.pbxHotel.Name = "pbxHotel";
             this.pbxHotel.Size = new System.Drawing.Size(239, 217);
             this.pbxHotel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

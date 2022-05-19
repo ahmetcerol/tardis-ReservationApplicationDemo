@@ -14,8 +14,7 @@ namespace YazılımMimarisiProje.UI.Forms
     public partial class ReservationPersonalInformation : Form
     {
         private Form activateForm;
-       
-
+      
         public ReservationPersonalInformation()
         {
             
@@ -47,7 +46,7 @@ namespace YazılımMimarisiProje.UI.Forms
             else
             {
                 
-                OpenChildForm(new Forms.AboutReservation(tbxEmail.Text), sender);
+                OpenChildForm(new Forms.AboutReservation(tbxEmail.Text,tbxName.Text,tbxSurname.Text,Convert.ToInt32(tbxPersonalIdentificationNo.Text),Convert.ToInt32(tbxPhoneNumber.Text)), sender);
             }
            
         }

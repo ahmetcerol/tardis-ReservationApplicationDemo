@@ -31,20 +31,13 @@ namespace YazılımMimarisiProje.UI.Forms
             this.Close();
         }
 
-     
+
         private void btnApproval_Click(object sender, EventArgs e)
         {
-            try
-            {
-                _reservationService.Delete(DeleteBooker);
-                MessageBox.Show("Rezervasyonunuz başarıyla iptal edildi");
-                this.Close();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Reservasyonunuz bulunamadı");
-                 
-            } 
+
+            _reservationService.Delete(DeleteBooker);
+            MessageBox.Show("Rezervasyonunuz başarıyla iptal edildi");
+            this.Close();
         }
     }
 }

@@ -13,7 +13,8 @@ namespace YazılımMimarisiProje.DataAccess.Concrete.Sql
     public class ReservationDal:IReservationDal
     {
         SqlConnection aconnection = new SqlConnection
-           (@"server=(localdb)\mssqllocaldb; initial catalog=TardisDatabase; integrated security=true");
+           (@" Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hp\source\repos\YazılımMimarisiProke\YazılımMimarisiProje.DataAccess\SoftwareArchitecture.mdf;Integrated Security=True");
+            
         private void ConnectionControl()
         {
             if (aconnection.State == ConnectionState.Closed)
@@ -26,7 +27,7 @@ namespace YazılımMimarisiProje.DataAccess.Concrete.Sql
         {
 
             ConnectionControl();
-            SqlCommand command = new SqlCommand("Select * from Reservation ", aconnection);
+            SqlCommand command = new SqlCommand("Select * from Bilgiler ", aconnection);
             SqlDataReader reader = command.ExecuteReader();
             List<ReservationInformation> reservationInformation = new List<ReservationInformation>();
             while (reader.Read())
@@ -49,16 +50,35 @@ namespace YazılımMimarisiProje.DataAccess.Concrete.Sql
 
             return reservationInformation;
         }
-        public void Add(ReservationInformation reservationInformation)
+        public void Add(ReservationInformation reservationInformation,Booker booker)
         {
             ConnectionControl();
             SqlCommand command = new SqlCommand(
-                "Insert into Reservation values(@ReservationAccomodation, @ReservationTransportation, @ReservationEntranceDate, @ReservationQuitDate, @ReservationPrice)", aconnection);
+                "Insert into Bilgiler Values(@ReservationAccomodation, @ReservationTransportation, @ReservationEntranceDate, @ReservationQuitDate, @ReservationPrice,@BookerName, @BookerSurname, @BookerEmail, @BookerTcNo, @BookerPhoneNumber)", aconnection);
             command.Parameters.AddWithValue("@ReservationAccomodation", reservationInformation.ReservationAccomodation);
             command.Parameters.AddWithValue("@ReservationTransportation", reservationInformation.ReservationTransportation);
             command.Parameters.AddWithValue("@ReservationEntranceDate", reservationInformation.ReservationEntranceDate);
             command.Parameters.AddWithValue("@ReservationQuitDate", reservationInformation.ReservationQuitDate);
             command.Parameters.AddWithValue("@ReservationPrice", reservationInformation.ReservationPrice);
+            command.Parameters.AddWithValue("@BookerName", booker.BookerName);
+            command.Parameters.AddWithValue("@BookerSurname", booker.BookerSurname);
+            command.Parameters.AddWithValue("@BookerEmail", booker.BookerEmail);
+            command.Parameters.AddWithValue("@BookerTcNo", booker.BookerTcNo);
+            command.Parameters.AddWithValue("@BookerPhoneNumber", booker.BookerPhoneNumber);
+            command.ExecuteNonQuery();
+            aconnection.Close();
+        }
+
+        public void Add(Booker booker)
+        {
+            ConnectionControl();
+            SqlCommand command = new SqlCommand(
+                "Insert into Booker Values(@BookerName, @BookerSurname, @BookerEmail, @BookerTcNo, @BookerPhoneNumber)", aconnection);
+            command.Parameters.AddWithValue("@BookerName",booker.BookerName);
+            command.Parameters.AddWithValue("@BookerSurname",booker.BookerSurname);
+            command.Parameters.AddWithValue("@BookerEmail",booker.BookerEmail );
+            command.Parameters.AddWithValue("@BookerTcNo", booker.BookerTcNo);
+            command.Parameters.AddWithValue("@BookerPhoneNumber", booker.BookerPhoneNumber);
             command.ExecuteNonQuery();
             aconnection.Close();
         }
@@ -67,10 +87,12 @@ namespace YazılımMimarisiProje.DataAccess.Concrete.Sql
         {
             ConnectionControl();
             SqlCommand command = new SqlCommand(
-                "Delete from Booker Where BookerEmail=@BookerEmail", aconnection);
+                "Delete from Bilgiler Where BookerEmail=@BookerEmail", aconnection);
             command.Parameters.AddWithValue("@BookerEmail", BookerEmail);
             command.ExecuteNonQuery();
             aconnection.Close();
         }
+
+
     }
 }

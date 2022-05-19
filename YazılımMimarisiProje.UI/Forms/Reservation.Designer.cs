@@ -41,12 +41,14 @@ namespace YazılımMimarisiProje.UI.Forms
             this.lblTranportation = new System.Windows.Forms.Label();
             this.cbxAccomodation = new System.Windows.Forms.ComboBox();
             this.lblAccomadition = new System.Windows.Forms.Label();
+            this.lblReservationInfo = new System.Windows.Forms.Label();
             this.pnlGetingReservation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxReservation)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlGetingReservation
             // 
+            this.pnlGetingReservation.Controls.Add(this.lblReservationInfo);
             this.pnlGetingReservation.Controls.Add(this.btnForward);
             this.pnlGetingReservation.Controls.Add(this.pbxReservation);
             this.pnlGetingReservation.Controls.Add(this.dtpQuit);
@@ -136,8 +138,8 @@ namespace YazılımMimarisiProje.UI.Forms
             // 
             this.cbxTransportation.FormattingEnabled = true;
             this.cbxTransportation.Items.AddRange(new object[] {
-            "Flight",
-            "Bus"});
+            "Uçak",
+            "Otobüs"});
             this.cbxTransportation.Location = new System.Drawing.Point(148, 108);
             this.cbxTransportation.Name = "cbxTransportation";
             this.cbxTransportation.Size = new System.Drawing.Size(124, 21);
@@ -157,8 +159,8 @@ namespace YazılımMimarisiProje.UI.Forms
             // 
             this.cbxAccomodation.FormattingEnabled = true;
             this.cbxAccomodation.Items.AddRange(new object[] {
-            "Tent",
-            "Hotel"});
+            "Çadır",
+            "Otel"});
             this.cbxAccomodation.Location = new System.Drawing.Point(148, 66);
             this.cbxAccomodation.Name = "cbxAccomodation";
             this.cbxAccomodation.Size = new System.Drawing.Size(124, 21);
@@ -173,6 +175,17 @@ namespace YazılımMimarisiProje.UI.Forms
             this.lblAccomadition.Size = new System.Drawing.Size(83, 15);
             this.lblAccomadition.TabIndex = 10;
             this.lblAccomadition.Text = "Konaklama:";
+            // 
+            // lblReservationInfo
+            // 
+            this.lblReservationInfo.AutoSize = true;
+            this.lblReservationInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblReservationInfo.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblReservationInfo.Location = new System.Drawing.Point(57, 325);
+            this.lblReservationInfo.Name = "lblReservationInfo";
+            this.lblReservationInfo.Size = new System.Drawing.Size(376, 60);
+            this.lblReservationInfo.TabIndex = 50;
+            this.lblReservationInfo.Text = resources.GetString("lblReservationInfo.Text");
             // 
             // Reservation
             // 
@@ -204,5 +217,6 @@ namespace YazılımMimarisiProje.UI.Forms
         private System.Windows.Forms.Label lblTranportation;
         private System.Windows.Forms.ComboBox cbxAccomodation;
         private System.Windows.Forms.Label lblAccomadition;
+        private System.Windows.Forms.Label lblReservationInfo;
     }
 }

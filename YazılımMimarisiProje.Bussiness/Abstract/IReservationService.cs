@@ -10,7 +10,7 @@ namespace YazılımMimarisiProje.Bussiness.Abstract
    public  interface IReservationService
     {
         List<ReservationInformation> GetAll();
-        void Add(ReservationInformation reservationInformation);
         void Delete(string ReservationEmail);
+        void Add(ReservationInformation reservationInformation, Booker booker);
     }
 }
