@@ -43,17 +43,17 @@ namespace YazılımMimarisiProje.UI
             this.pbxLogo = new System.Windows.Forms.PictureBox();
             this.pnlChildForms = new System.Windows.Forms.Panel();
             this.pbxTent = new System.Windows.Forms.PictureBox();
-            this.pbxHotel = new System.Windows.Forms.PictureBox();
             this.lblAboutTardis = new System.Windows.Forms.Label();
             this.pbxMainChildForm = new System.Windows.Forms.PictureBox();
+            this.pbxHotel = new System.Windows.Forms.PictureBox();
             this.btnBackMain = new System.Windows.Forms.Button();
             this.pnlMainPageMenu.SuspendLayout();
             this.pnlMainPageLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.pnlChildForms.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxTent)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxHotel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMainChildForm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxHotel)).BeginInit();
             this.SuspendLayout();
             // 
             // ımgListOfMainPage
@@ -206,6 +206,7 @@ namespace YazılımMimarisiProje.UI
             this.pnlChildForms.Name = "pnlChildForms";
             this.pnlChildForms.Size = new System.Drawing.Size(633, 397);
             this.pnlChildForms.TabIndex = 4;
+            this.pnlChildForms.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlChildForms_MouseDown);
             // 
             // pbxTent
             // 
@@ -216,16 +217,6 @@ namespace YazılımMimarisiProje.UI
             this.pbxTent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxTent.TabIndex = 7;
             this.pbxTent.TabStop = false;
-            // 
-            // pbxHotel
-            // 
-            this.pbxHotel.Image = ((System.Drawing.Image)(resources.GetObject("pbxHotel.Image")));
-            this.pbxHotel.Location = new System.Drawing.Point(72, 156);
-            this.pbxHotel.Name = "pbxHotel";
-            this.pbxHotel.Size = new System.Drawing.Size(239, 217);
-            this.pbxHotel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxHotel.TabIndex = 6;
-            this.pbxHotel.TabStop = false;
             // 
             // lblAboutTardis
             // 
@@ -248,6 +239,16 @@ namespace YazılımMimarisiProje.UI
             this.pbxMainChildForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxMainChildForm.TabIndex = 4;
             this.pbxMainChildForm.TabStop = false;
+            // 
+            // pbxHotel
+            // 
+            this.pbxHotel.Image = ((System.Drawing.Image)(resources.GetObject("pbxHotel.Image")));
+            this.pbxHotel.Location = new System.Drawing.Point(72, 156);
+            this.pbxHotel.Name = "pbxHotel";
+            this.pbxHotel.Size = new System.Drawing.Size(239, 217);
+            this.pbxHotel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxHotel.TabIndex = 6;
+            this.pbxHotel.TabStop = false;
             // 
             // btnBackMain
             // 
@@ -279,14 +280,15 @@ namespace YazılımMimarisiProje.UI
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Page";
             this.Load += new System.EventHandler(this.MainPage_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainPage_MouseDown);
             this.pnlMainPageMenu.ResumeLayout(false);
             this.pnlMainPageLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.pnlChildForms.ResumeLayout(false);
             this.pnlChildForms.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxTent)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxHotel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMainChildForm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxHotel)).EndInit();
             this.ResumeLayout(false);
 
         }

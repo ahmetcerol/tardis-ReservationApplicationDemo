@@ -36,19 +36,28 @@ namespace YazılımMimarisiProje.UI.Forms
             childForm.Show();
 
         }
-     
+
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            if (tbxEmail.Text==String.Empty||tbxName.Text == String.Empty||tbxPersonalIdentificationNo.Text == String.Empty||tbxPhoneNumber.Text == String.Empty||tbxSurname.Text == String.Empty)
+            if (tbxEmail.Text == String.Empty || tbxName.Text == String.Empty || tbxPersonalIdentificationNo.Text == String.Empty || tbxPhoneNumber.Text == String.Empty || tbxSurname.Text == String.Empty)
             {
                 MessageBox.Show("Lütfen tüm alanları doldurunuz");
             }
             else
             {
-                
-                OpenChildForm(new Forms.AboutReservation(tbxEmail.Text,tbxName.Text,tbxSurname.Text,Convert.ToInt32(tbxPersonalIdentificationNo.Text),Convert.ToInt32(tbxPhoneNumber.Text)), sender);
+                try
+                {
+                    OpenChildForm(new Forms.AboutReservation(tbxEmail.Text, tbxName.Text, tbxSurname.Text, Convert.ToInt32(tbxPersonalIdentificationNo.Text), Convert.ToInt32(tbxPhoneNumber.Text)), sender);
+                }
+
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Lütfen alanları doğru doldurduğunuza emin olunuz!");
+                }
+
+
             }
-           
         }
     }
 }

@@ -31,60 +31,60 @@ namespace YazılımMimarisiProje.UI
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.SoftwareArchitectureDataSet = new YazılımMimarisiProje.UI.SoftwareArchitectureDataSet();
             this.BilgilerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SoftwareArchitectureDataSet = new YazılımMimarisiProje.UI.SoftwareArchitectureDataSet();
+            this.rpwRezervation = new Microsoft.Reporting.WinForms.ReportViewer();
             this.BilgilerTableAdapter = new YazılımMimarisiProje.UI.SoftwareArchitectureDataSetTableAdapters.BilgilerTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.SoftwareArchitectureDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BilgilerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SoftwareArchitectureDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.BilgilerBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "YazılımMimarisiProje.UI.Reports.RezervationReport.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(800, 450);
-            this.reportViewer1.TabIndex = 0;
-            // 
-            // SoftwareArchitectureDataSet
-            // 
-            this.SoftwareArchitectureDataSet.DataSetName = "SoftwareArchitectureDataSet";
-            this.SoftwareArchitectureDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // BilgilerBindingSource
             // 
             this.BilgilerBindingSource.DataMember = "Bilgiler";
             this.BilgilerBindingSource.DataSource = this.SoftwareArchitectureDataSet;
             // 
+            // SoftwareArchitectureDataSet
+            // 
+            this.SoftwareArchitectureDataSet.DataSetName = "SoftwareArchitectureDataSet";
+            this.SoftwareArchitectureDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // rpwRezervation
+            // 
+            this.rpwRezervation.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.BilgilerBindingSource;
+            this.rpwRezervation.LocalReport.DataSources.Add(reportDataSource1);
+            this.rpwRezervation.LocalReport.ReportEmbeddedResource = "YazılımMimarisiProje.UI.Reports.RezervationReport.rdlc";
+            this.rpwRezervation.Location = new System.Drawing.Point(0, 0);
+            this.rpwRezervation.Name = "rpwRezervation";
+            this.rpwRezervation.ServerReport.BearerToken = null;
+            this.rpwRezervation.Size = new System.Drawing.Size(800, 450);
+            this.rpwRezervation.TabIndex = 0;
+            // 
             // BilgilerTableAdapter
             // 
             this.BilgilerTableAdapter.ClearBeforeFill = true;
             // 
-            // Form1
+            // ReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.rpwRezervation);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "ReportForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.SoftwareArchitectureDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BilgilerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SoftwareArchitectureDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private Microsoft.Reporting.WinForms.ReportViewer rpwRezervation;
         private System.Windows.Forms.BindingSource BilgilerBindingSource;
         private SoftwareArchitectureDataSet SoftwareArchitectureDataSet;
         private SoftwareArchitectureDataSetTableAdapters.BilgilerTableAdapter BilgilerTableAdapter;

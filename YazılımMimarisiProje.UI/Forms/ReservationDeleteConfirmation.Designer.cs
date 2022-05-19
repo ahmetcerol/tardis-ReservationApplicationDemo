@@ -38,11 +38,12 @@ namespace YazılımMimarisiProje.UI.Forms
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(11, 18);
+            this.label2.Location = new System.Drawing.Point(11, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(295, 15);
+            this.label2.Size = new System.Drawing.Size(295, 30);
             this.label2.TabIndex = 34;
-            this.label2.Text = "Rezervasyonunuzu silmek istediğinize emin misiniz?\r\n";
+            this.label2.Text = "Rezervasyonunuzu silmek istediğinize emin misiniz?\r\n(Konaklama ve Ulaşım rezervas" +
+    "yonunuz silinecektir!)\r\n";
             // 
             // btnApproval
             // 

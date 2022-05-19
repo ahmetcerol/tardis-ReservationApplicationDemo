@@ -37,7 +37,15 @@ namespace YazılımMimarisiProje.UI.Forms
 
         private void btnGetADocument_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ReportForm());
+            if (tbxEmail.Text==string.Empty||tbxPersonalIdentificationNo.Text==String.Empty)
+            {
+                MessageBox.Show("Lütfen tüm alanları doldurunuz!");
+            }
+            else
+            {
+                OpenChildForm(new ReportForm());
+            }
+           
         }
     }
 }
