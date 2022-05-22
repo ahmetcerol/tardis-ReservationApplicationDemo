@@ -23,12 +23,24 @@ namespace YazılımMimarisiProje.UI.Forms
             
         }
         private string BookerEmail;
-     
+
+        bool SayiMi(string text)
+        {
+            foreach (char chr in text)
+            {
+                if (!Char.IsNumber(chr)) return false;
+            }
+            return true;
+        }
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (tbxEmail.Text==String.Empty||tbxPersonalIdentificationNo.Text==String.Empty)
             {
                 MessageBox.Show("Lütfen tüm bilgileri doldurun!");
+            }
+            else if (SayiMi(tbxPersonalIdentificationNo.Text)!=true)
+            {
+                MessageBox.Show("Lütfen tüm bilgileri doğru dolduruğunuza emin olun!");
             }
             else
             {
