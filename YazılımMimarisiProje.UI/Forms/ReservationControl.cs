@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace YazılımMimarisiProje.UI.Forms
 {
@@ -43,7 +44,8 @@ namespace YazılımMimarisiProje.UI.Forms
             }
             else
             {
-                OpenChildForm(new ReportForm());
+                RezervationControlInformation rezervationControlInformation = new RezervationControlInformation(tbxEmail.Text);
+                rezervationControlInformation.ShowDialog();
             }
            
         }

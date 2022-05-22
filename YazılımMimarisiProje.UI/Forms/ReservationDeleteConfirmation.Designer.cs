@@ -29,20 +29,20 @@ namespace YazılımMimarisiProje.UI.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblInformation = new System.Windows.Forms.Label();
             this.btnApproval = new System.Windows.Forms.Button();
             this.btnDisapproval = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label2
+            // lblInformation
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(11, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(295, 30);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "Rezervasyonunuzu silmek istediğinize emin misiniz?\r\n(Konaklama ve Ulaşım rezervas" +
+            this.lblInformation.AutoSize = true;
+            this.lblInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblInformation.Location = new System.Drawing.Point(11, 9);
+            this.lblInformation.Name = "lblInformation";
+            this.lblInformation.Size = new System.Drawing.Size(295, 30);
+            this.lblInformation.TabIndex = 34;
+            this.lblInformation.Text = "Rezervasyonunuzu silmek istediğinize emin misiniz?\r\n(Konaklama ve Ulaşım rezervas" +
     "yonunuz silinecektir!)\r\n";
             // 
             // btnApproval
@@ -87,7 +87,7 @@ namespace YazılımMimarisiProje.UI.Forms
             this.ClientSize = new System.Drawing.Size(318, 94);
             this.Controls.Add(this.btnDisapproval);
             this.Controls.Add(this.btnApproval);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblInformation);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ReservationDeleteConfirmation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -99,7 +99,7 @@ namespace YazılımMimarisiProje.UI.Forms
 
         #endregion
 
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblInformation;
         private System.Windows.Forms.Button btnApproval;
         private System.Windows.Forms.Button btnDisapproval;
     }

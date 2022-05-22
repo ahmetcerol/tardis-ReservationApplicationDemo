@@ -31,6 +31,7 @@ namespace YazılımMimarisiProje.UI
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportForm));
             this.BilgilerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.SoftwareArchitectureDataSet = new YazılımMimarisiProje.UI.SoftwareArchitectureDataSet();
             this.rpwRezervation = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -72,9 +73,11 @@ namespace YazılımMimarisiProje.UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.rpwRezervation);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ReportForm";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Tardis Rapor";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BilgilerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SoftwareArchitectureDataSet)).EndInit();

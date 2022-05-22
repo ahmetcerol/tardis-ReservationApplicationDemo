@@ -32,6 +32,11 @@ namespace YazılımMimarisiProje.Bussiness.Concrete
         {
             _reservationDal.Add(reservationInformation,booker);
         }
+
+        public List<ReservationInformation> GetUserInformation(string BookerEmail)
+        {
+           return _reservationDal.GetUserInformation(BookerEmail);
+        }
     }
 
 

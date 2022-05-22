@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using YazılımMimarisiProje.Bussiness.Abstract;
 using YazılımMimarisiProje.Bussiness.Concrete;
 using YazılımMimarisiProje.DataAccess.Concrete.Sql;
+using YazılımMimarisiProje.Entity.Abstract;
 using YazılımMimarisiProje.Entity.Concrete;
 
 namespace YazılımMimarisiProje.UI.Forms
@@ -23,6 +24,7 @@ namespace YazılımMimarisiProje.UI.Forms
         {
             _reservationService = new ReservationManager(new ReservationDal());
             InitializeComponent();
+            new Client().Main();
         }
         private void OpenChildForm(Form childForm, object btnSender)
         {

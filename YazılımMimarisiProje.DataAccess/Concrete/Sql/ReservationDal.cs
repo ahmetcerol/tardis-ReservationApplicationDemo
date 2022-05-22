@@ -83,6 +83,34 @@ namespace YazılımMimarisiProje.DataAccess.Concrete.Sql
             aconnection.Close();
         }
 
+        public List<ReservationInformation> GetUserInformation(string BookerEmail)
+        {
+
+            ConnectionControl();
+            SqlCommand command = new SqlCommand("Select RezervationAccomodation,RezervationTransportation,RezervationEntranceDate,RezervationQuitDate,RezervationPrice from Bilgiler Where BookerEmail=@BookerEmail", aconnection);
+            command.Parameters.AddWithValue("@BookerEmail", BookerEmail);
+            SqlDataReader reader = command.ExecuteReader();
+            List<ReservationInformation> user = new List<ReservationInformation>();
+            while (reader.Read())
+            {
+                ReservationInformation users = new ReservationInformation()
+                {
+                    ReservationAccomodation = reader["RezervationAccomodation"].ToString(),
+                    ReservationTransportation = reader["RezervationTransportation"].ToString(),
+                    ReservationEntranceDate = Convert.ToDateTime(reader["RezervationEntranceDate"]),
+                    ReservationQuitDate = Convert.ToDateTime(reader["RezervationQuitDate"]),
+                    ReservationPrice = Convert.ToInt32(reader["RezervationPrice"]),
+
+                };
+                user.Add(users);
+
+            }
+            reader.Close();
+            aconnection.Close();
+
+            return user;
+        }
+
         public void Delete(string BookerEmail)
         {
             ConnectionControl();

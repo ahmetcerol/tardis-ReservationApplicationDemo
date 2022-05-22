@@ -9,25 +9,19 @@ namespace YazılımMimarisiProje.Entity.Concrete
 {
    public class Client
     {
-        ReservationFactory ReservationFactory;
-        ITransportation transportation;
-        IAccomodation accomodation;
-
-        public Client(ReservationFactory reservationFactory)
+        public void Main()
         {
-            ReservationFactory = reservationFactory;
-            transportation = reservationFactory.GetTransportation();
-            accomodation = reservationFactory.GetAccomodation();
+            // The client code can work with any concrete factory class.
+            ClientMethod(new ConcreteFactoryA());
+            ClientMethod(new ConcreteFactoryB());
+            ClientMethod(new ConcreteFactoryC());
+            ClientMethod(new ConcreteFactoryD());
         }
 
-        public string ReservationTransportation(ReservationInformation reservationInformation)
+        public void ClientMethod(ReservationFactory factory)
         {
-            return transportation.Apply(reservationInformation);
-        }
-
-        public string ReservationAccomodation(ReservationInformation reservationInformation)
-        {
-            return accomodation.Apply(reservationInformation);
+            var productA = factory.GetAccomodation();
+            var productB = factory.GetTransportation();
         }
     }
 }
