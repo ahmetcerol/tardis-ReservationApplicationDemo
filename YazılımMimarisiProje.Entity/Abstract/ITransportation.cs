@@ -9,6 +9,6 @@ namespace YazılımMimarisiProje.Entity.Abstract
 {
     public interface ITransportation
     {
-        string Apply(ReservationInformation reservationInformation);
+        int Apply(ReservationInformation reservationInformation);
     }
 }

@@ -20,8 +20,10 @@ namespace YazılımMimarisiProje.Entity.Concrete
 
         public void ClientMethod(ReservationFactory factory)
         {
-            var productA = factory.GetAccomodation();
-            var productB = factory.GetTransportation();
+            var Hotel = factory.GetAccomodation();
+            var Flight = factory.GetTransportation();
+            var Tent = factory.GetAccomodation();
+            var Bus = factory.GetTransportation();
         }
     }
 }

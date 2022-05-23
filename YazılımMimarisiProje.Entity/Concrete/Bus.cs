@@ -9,10 +9,11 @@ namespace YazılımMimarisiProje.Entity.Concrete
 {
     public class Bus : ITransportation
     {
-        public string Apply(ReservationInformation reservationInformation)
+        public int Apply(ReservationInformation reservationInformation)
         {
-            reservationInformation.ReservationTransportation = "Bus";
-            return reservationInformation.ReservationTransportation;
+            
+            reservationInformation.ReservationPrice = 150;
+            return reservationInformation.ReservationPrice;
         }
     }
 }
