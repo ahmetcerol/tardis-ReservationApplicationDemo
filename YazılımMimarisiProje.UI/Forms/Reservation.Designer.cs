@@ -31,6 +31,7 @@ namespace YazılımMimarisiProje.UI.Forms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reservation));
             this.pnlGetingReservation = new System.Windows.Forms.Panel();
+            this.lblReservationInfo = new System.Windows.Forms.Label();
             this.btnForward = new System.Windows.Forms.Button();
             this.pbxReservation = new System.Windows.Forms.PictureBox();
             this.dtpQuit = new System.Windows.Forms.DateTimePicker();
@@ -41,7 +42,6 @@ namespace YazılımMimarisiProje.UI.Forms
             this.lblTranportation = new System.Windows.Forms.Label();
             this.cbxAccomodation = new System.Windows.Forms.ComboBox();
             this.lblAccomadition = new System.Windows.Forms.Label();
-            this.lblReservationInfo = new System.Windows.Forms.Label();
             this.pnlGetingReservation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxReservation)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +64,17 @@ namespace YazılımMimarisiProje.UI.Forms
             this.pnlGetingReservation.Name = "pnlGetingReservation";
             this.pnlGetingReservation.Size = new System.Drawing.Size(633, 397);
             this.pnlGetingReservation.TabIndex = 0;
+            // 
+            // lblReservationInfo
+            // 
+            this.lblReservationInfo.AutoSize = true;
+            this.lblReservationInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblReservationInfo.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblReservationInfo.Location = new System.Drawing.Point(57, 325);
+            this.lblReservationInfo.Name = "lblReservationInfo";
+            this.lblReservationInfo.Size = new System.Drawing.Size(376, 60);
+            this.lblReservationInfo.TabIndex = 50;
+            this.lblReservationInfo.Text = resources.GetString("lblReservationInfo.Text");
             // 
             // btnForward
             // 
@@ -98,11 +109,11 @@ namespace YazılımMimarisiProje.UI.Forms
             // 
             this.dtpQuit.Location = new System.Drawing.Point(223, 252);
             this.dtpQuit.MaxDate = new System.DateTime(2023, 2, 1, 0, 0, 0, 0);
-            this.dtpQuit.MinDate = new System.DateTime(2022, 5, 18, 0, 0, 0, 0);
+            this.dtpQuit.MinDate = new System.DateTime(2022, 5, 29, 0, 0, 0, 0);
             this.dtpQuit.Name = "dtpQuit";
             this.dtpQuit.Size = new System.Drawing.Size(200, 20);
             this.dtpQuit.TabIndex = 17;
-            this.dtpQuit.Value = new System.DateTime(2022, 5, 18, 0, 0, 0, 0);
+            this.dtpQuit.Value = new System.DateTime(2022, 5, 29, 0, 0, 0, 0);
             // 
             // lblQuitDateTime
             // 
@@ -118,11 +129,11 @@ namespace YazılımMimarisiProje.UI.Forms
             // 
             this.dtpEnter.Location = new System.Drawing.Point(223, 219);
             this.dtpEnter.MaxDate = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
-            this.dtpEnter.MinDate = new System.DateTime(2022, 5, 17, 0, 0, 0, 0);
+            this.dtpEnter.MinDate = new System.DateTime(2022, 5, 28, 0, 0, 0, 0);
             this.dtpEnter.Name = "dtpEnter";
             this.dtpEnter.Size = new System.Drawing.Size(200, 20);
             this.dtpEnter.TabIndex = 15;
-            this.dtpEnter.Value = new System.DateTime(2022, 5, 17, 0, 0, 0, 0);
+            this.dtpEnter.Value = new System.DateTime(2022, 5, 28, 0, 0, 0, 0);
             // 
             // lblEnterDateTime
             // 
@@ -175,17 +186,6 @@ namespace YazılımMimarisiProje.UI.Forms
             this.lblAccomadition.Size = new System.Drawing.Size(83, 15);
             this.lblAccomadition.TabIndex = 10;
             this.lblAccomadition.Text = "Konaklama:";
-            // 
-            // lblReservationInfo
-            // 
-            this.lblReservationInfo.AutoSize = true;
-            this.lblReservationInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblReservationInfo.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblReservationInfo.Location = new System.Drawing.Point(57, 325);
-            this.lblReservationInfo.Name = "lblReservationInfo";
-            this.lblReservationInfo.Size = new System.Drawing.Size(376, 60);
-            this.lblReservationInfo.TabIndex = 50;
-            this.lblReservationInfo.Text = resources.GetString("lblReservationInfo.Text");
             // 
             // Reservation
             // 

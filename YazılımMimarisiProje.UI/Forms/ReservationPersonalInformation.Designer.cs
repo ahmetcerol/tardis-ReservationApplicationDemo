@@ -44,12 +44,14 @@ namespace YazılımMimarisiProje.UI.Forms
             this.tbxName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.lblInformation = new System.Windows.Forms.Label();
+            this.lblReservationInfo = new System.Windows.Forms.Label();
             this.pnlReservationPersonelInformation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxReservation)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlReservationPersonelInformation
             // 
+            this.pnlReservationPersonelInformation.Controls.Add(this.lblReservationInfo);
             this.pnlReservationPersonelInformation.Controls.Add(this.btnCreate);
             this.pnlReservationPersonelInformation.Controls.Add(this.tbxPhoneNumber);
             this.pnlReservationPersonelInformation.Controls.Add(this.lblPhoneNumber);
@@ -193,6 +195,19 @@ namespace YazılımMimarisiProje.UI.Forms
             this.lblInformation.TabIndex = 24;
             this.lblInformation.Text = "Rezervasyonu Yapan Kişinin:";
             // 
+            // lblReservationInfo
+            // 
+            this.lblReservationInfo.AutoSize = true;
+            this.lblReservationInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblReservationInfo.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblReservationInfo.Location = new System.Drawing.Point(33, 329);
+            this.lblReservationInfo.Name = "lblReservationInfo";
+            this.lblReservationInfo.Size = new System.Drawing.Size(336, 45);
+            this.lblReservationInfo.TabIndex = 51;
+            this.lblReservationInfo.Text = "**Bu bilgiler sadece Rezervasyonunuzla ilgili kullanılacak ve \r\ngizlilik esasları" +
+    "na uygun bir şekilde korunacaktır.\r\nMerak etmeyin bilgileriniz bizimle güvende.*" +
+    "*\r\n";
+            // 
             // ReservationPersonalInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,5 +241,6 @@ namespace YazılımMimarisiProje.UI.Forms
         private System.Windows.Forms.TextBox tbxName;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblInformation;
+        private System.Windows.Forms.Label lblReservationInfo;
     }
 }
