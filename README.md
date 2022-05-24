@@ -6,7 +6,7 @@
 
 *Bu uygulama Yazılım Mimarisi dersimizin uygulama ödevidir!*
 
-*Uygulamamız bir Rezervasyon Aplikasyonudur. İçeriğinde Abstract Factory methodları kullanılmıştır.Uygulama kapsamı;*
+*Uygulamamız bir Rezervasyon Aplikasyonudur. İçeriğinde Abstract Factory ve Bridge Tasarım Deseni methodları kullanılmıştır.Uygulama kapsamı;*
 
 *Rezervasyon Sayfası; Kullanıcıdan tarih,saat,konaklama ve ulaşım bilgileri istenir. Kullanıcı bunları verdiği takdirde, bir ileriki sayfaya yönlendirilir,yönlendirildiği sayfada kişisel bilgileri doldurması istenir. Bu bilgiler daha sonra Rezervasyon iptal veya Rezervasyon Kontrol(rapor sayfası) işlemlerinde kullanılacaktır. Kullanıcı bunları da doğru bir şekilde verdikten sonra rezervasyonunu onaylamak için son kez genel olarak rezervasyon içeriğine baktırılır.Bu sayfada rezervasyonun toplam fiyatı da kullanıcıya bilgi olarak verilir.Eğer kullanıcı onaylar ise rezervasyon oluşturulur.*
 
@@ -20,7 +20,7 @@
 
 *This application is the application assignment of our Software Architecture course!*
 
-*Our application is a Booking Application. Abstract Factory methods are used in its content. Scope of application;*
+*Our application is a Booking Application. Abstract Factory and Bridge Design Patterns methods are used in its content. Scope of application;*
 
 *Reservation Page;Date, time, accommodation and transportation information are requested from the user.If the user gives them, she/he is directed to the next page, and is asked to fill in personal information on the page she/he is directed to.This information will be used later in Reservation cancellation or Reservation Control (report page) transactions.After the user has given them correctly, the reservation content is generally looked at for the last time to confirm the reservation.On this page, the total price of the reservation is given to the user as information. If the user approves, the reservation is created.*
 
