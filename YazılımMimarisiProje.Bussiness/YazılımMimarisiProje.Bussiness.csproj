@@ -41,8 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IReservationBuilder.cs" />
     <Compile Include="Abstract\IReservationService.cs" />
+    <Compile Include="Concrete\JSONConcreteBuilder.cs" />
+    <Compile Include="Concrete\ReservationInformationDırector.cs" />
     <Compile Include="Concrete\ReservationManager.cs" />
+    <Compile Include="Concrete\XMLConcreteBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
