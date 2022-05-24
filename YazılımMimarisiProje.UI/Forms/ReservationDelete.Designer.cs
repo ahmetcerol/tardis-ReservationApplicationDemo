@@ -32,11 +32,11 @@ namespace YazılımMimarisiProje.UI.Forms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReservationDelete));
             this.btnDelete = new System.Windows.Forms.Button();
             this.lblReservationInformation = new System.Windows.Forms.Label();
-            this.pbxReservation = new System.Windows.Forms.PictureBox();
             this.tbxPersonalIdentificationNo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tbxEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
+            this.pbxReservation = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxReservation)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,16 +69,6 @@ namespace YazılımMimarisiProje.UI.Forms
             this.lblReservationInformation.Size = new System.Drawing.Size(229, 45);
             this.lblReservationInformation.TabIndex = 43;
             this.lblReservationInformation.Text = "**Rezervasyonunuza silmek üzeresiniz**\r\n\r\n\r\n";
-            // 
-            // pbxReservation
-            // 
-            this.pbxReservation.Image = ((System.Drawing.Image)(resources.GetObject("pbxReservation.Image")));
-            this.pbxReservation.Location = new System.Drawing.Point(523, 10);
-            this.pbxReservation.Name = "pbxReservation";
-            this.pbxReservation.Size = new System.Drawing.Size(98, 76);
-            this.pbxReservation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxReservation.TabIndex = 42;
-            this.pbxReservation.TabStop = false;
             // 
             // tbxPersonalIdentificationNo
             // 
@@ -114,6 +104,16 @@ namespace YazılımMimarisiProje.UI.Forms
             this.lblEmail.TabIndex = 38;
             this.lblEmail.Text = "Email:";
             // 
+            // pbxReservation
+            // 
+            this.pbxReservation.Image = ((System.Drawing.Image)(resources.GetObject("pbxReservation.Image")));
+            this.pbxReservation.Location = new System.Drawing.Point(523, 10);
+            this.pbxReservation.Name = "pbxReservation";
+            this.pbxReservation.Size = new System.Drawing.Size(98, 76);
+            this.pbxReservation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxReservation.TabIndex = 42;
+            this.pbxReservation.TabStop = false;
+            // 
             // ReservationDelete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -140,10 +140,10 @@ namespace YazılımMimarisiProje.UI.Forms
 
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label lblReservationInformation;
-        private System.Windows.Forms.PictureBox pbxReservation;
         private System.Windows.Forms.TextBox tbxPersonalIdentificationNo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbxEmail;
         private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.PictureBox pbxReservation;
     }
 }

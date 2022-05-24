@@ -12,6 +12,7 @@ namespace YazılımMimarisiProje.DataAccess.Abstract
     {
         void Add(ReservationInformation reservationInformation, Booker booker);
         List<ReservationInformation> GetUserInformation(string BookerEmail);
+        List<Booker> GetReservationInformation(string BookerEmail);
 
 
     }

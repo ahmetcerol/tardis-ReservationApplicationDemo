@@ -50,6 +50,7 @@
     <Compile Include="Abstract\ConcreteFactoryD.cs" />
     <Compile Include="Abstract\IAccomodation.cs" />
     <Compile Include="Abstract\IEntity.cs" />
+    <Compile Include="Abstract\IReservationBuilder.cs" />
     <Compile Include="Abstract\ITransportation.cs" />
     <Compile Include="Abstract\ReservationFactory.cs" />
     <Compile Include="Concrete\Booker.cs" />
@@ -57,8 +58,11 @@
     <Compile Include="Concrete\Client.cs" />
     <Compile Include="Concrete\Flight.cs" />
     <Compile Include="Concrete\Hotel.cs" />
+    <Compile Include="Concrete\JSONConcreteBuilder.cs" />
     <Compile Include="Concrete\ReservationInformation.cs" />
+    <Compile Include="Concrete\ReservationInformationDırector.cs" />
     <Compile Include="Concrete\Tent.cs" />
+    <Compile Include="Concrete\XMLConcreteBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

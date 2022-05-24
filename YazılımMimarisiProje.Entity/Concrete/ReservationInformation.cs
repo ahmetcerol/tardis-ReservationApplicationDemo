@@ -16,7 +16,12 @@ namespace YazılımMimarisiProje.Entity.Concrete
         public DateTime ReservationQuitDate { get; set; }
         public int ReservationPrice { get; set; }
         public int BookerId { get; set; }
-        
+
+        public override string ToString()
+        {
+            return $"{ReservationAccomodation} {ReservationTransportation} {ReservationEntranceDate} {ReservationQuitDate} {ReservationPrice}";
+        }
+
     }
 
 }

@@ -13,5 +13,6 @@ namespace YazılımMimarisiProje.Bussiness.Abstract
         List<ReservationInformation> GetUserInformation(string BookerEmail);
         void Delete(string ReservationEmail);
         void Add(ReservationInformation reservationInformation, Booker booker);
+        List<Booker> GetReservationInformation(string BookerEmail);
     }
 }

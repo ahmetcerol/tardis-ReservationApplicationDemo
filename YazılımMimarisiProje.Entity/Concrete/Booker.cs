@@ -15,5 +15,6 @@ namespace YazılımMimarisiProje.Entity.Concrete
         public string BookerEmail { get; set; }
         public int BookerTcNo { get; set; }
         public int BookerPhoneNumber { get; set; }
+       
     }
 }

@@ -14,6 +14,7 @@ using YazılımMimarisiProje.Bussiness.Abstract;
 using YazılımMimarisiProje.Bussiness.Concrete;
 using YazılımMimarisiProje.DataAccess.Concrete.Sql;
 using YazılımMimarisiProje.Entity.Concrete;
+using YazılımMimarisiProje.Entity.Abstract;
 
 
 
@@ -23,11 +24,35 @@ namespace YazılımMimarisiProje.UI.Forms
     public partial class RezervationControlInformation : Form
     {
         private string Booker;
+        ReservationInformation reservationInformation = new ReservationInformation();
+        Booker booker = new Booker();
         public RezervationControlInformation(string BookerEmail)
         {
             Booker = BookerEmail;
             InitializeComponent();
             _reservationDal = new ReservationManager(new ReservationDal());
+            GetReservationInformation();
+            GetUSerInformation();
+
+        }
+
+        private void GetUSerInformation()
+        {
+            dgwUserInformation.DataSource = _reservationDal.GetReservationInformation(Booker);
+            booker.BookerName = dgwUserInformation.Rows[0].Cells[1].Value.ToString();
+            booker.BookerSurname = dgwUserInformation.Rows[0].Cells[2].Value.ToString();
+            booker.BookerEmail = dgwUserInformation.Rows[0].Cells[3].Value.ToString();
+            booker.BookerPhoneNumber = Convert.ToInt32(dgwUserInformation.Rows[0].Cells[5].Value);
+        }
+
+        private void GetReservationInformation()
+        {
+            dgwReservationInformation.DataSource = _reservationDal.GetUserInformation(Booker);
+            reservationInformation.ReservationAccomodation = dgwReservationInformation.Rows[0].Cells[1].Value.ToString();
+            reservationInformation.ReservationTransportation = dgwReservationInformation.Rows[0].Cells[2].Value.ToString();
+            reservationInformation.ReservationEntranceDate = Convert.ToDateTime(dgwReservationInformation.Rows[0].Cells[3].Value);
+            reservationInformation.ReservationQuitDate = Convert.ToDateTime(dgwReservationInformation.Rows[0].Cells[4].Value);
+            reservationInformation.ReservationPrice = Convert.ToInt32(dgwReservationInformation.Rows[0].Cells[5].Value);
         }
 
         private IReservationService _reservationDal;
@@ -41,15 +66,11 @@ namespace YazılımMimarisiProje.UI.Forms
 
         private void btnJson_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = _reservationDal.GetUserInformation(Booker);
-            ReservationInformation reservationInformation = new ReservationInformation() {
-            
-            ReservationAccomodation = dataGridView1.Rows[0].Cells[1].Value.ToString(),
-            ReservationTransportation = dataGridView1.Rows[0].Cells[2].Value.ToString(),
-            ReservationEntranceDate = Convert.ToDateTime(dataGridView1.Rows[0].Cells[3].Value),
-            ReservationQuitDate = Convert.ToDateTime(dataGridView1.Rows[0].Cells[4].Value),
-            ReservationPrice = Convert.ToInt32(dataGridView1.Rows[0].Cells[5].Value),
-        };
+           
+            IReservationBuilder reservationBuilder = new JSONConcreteBuilder(reservationInformation,booker);
+            ReservationInformationDırector reservationInformationDırector = new ReservationInformationDırector();
+            reservationInformationDırector.Uret(reservationBuilder);
+
             string stringJSON = JsonConvert.SerializeObject(reservationInformation);
             string path = @"C:\Users\hp\Desktop\reservation.json";
             if (File.Exists(path))
@@ -73,19 +94,14 @@ namespace YazılımMimarisiProje.UI.Forms
             this.Close();
         }
 
+       
+
         private void btnXml_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = _reservationDal.GetUserInformation(Booker);
-            ReservationInformation reservationInformation = new ReservationInformation()
-            {
+            IReservationBuilder reservationBuilder = new XMLConcreteBuilder(reservationInformation, booker);
+            ReservationInformationDırector reservationInformationDırector = new ReservationInformationDırector();
+            reservationInformationDırector.Uret(reservationBuilder);
 
-                ReservationAccomodation = dataGridView1.Rows[0].Cells[1].Value.ToString(),
-                ReservationTransportation = dataGridView1.Rows[0].Cells[2].Value.ToString(),
-                ReservationEntranceDate = Convert.ToDateTime(dataGridView1.Rows[0].Cells[3].Value),
-                ReservationQuitDate = Convert.ToDateTime(dataGridView1.Rows[0].Cells[4].Value),
-                ReservationPrice = Convert.ToInt32(dataGridView1.Rows[0].Cells[5].Value),
-            };
-                
             Stream stream = new FileStream("BasicSerialization.xml", FileMode.Create, FileAccess.Write, FileShare.Write);
             XmlSerializer xmlserializer = new XmlSerializer(typeof(ReservationInformation));
             xmlserializer.Serialize(stream, reservationInformation);
@@ -93,5 +109,7 @@ namespace YazılımMimarisiProje.UI.Forms
             MessageBox.Show("Xml dosyası başarıyla oluşturuldu.");
             this.Close();
         }
+
+      
     }
 }

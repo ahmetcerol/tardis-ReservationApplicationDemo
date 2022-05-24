@@ -33,8 +33,10 @@ namespace YazılımMimarisiProje.UI.Forms
             this.btnJson = new System.Windows.Forms.Button();
             this.btnXml = new System.Windows.Forms.Button();
             this.btnExcel = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgwReservationInformation = new System.Windows.Forms.DataGridView();
+            this.dgwUserInformation = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwReservationInformation)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwUserInformation)).BeginInit();
             this.SuspendLayout();
             // 
             // lblInformation
@@ -98,31 +100,42 @@ namespace YazılımMimarisiProje.UI.Forms
             this.btnExcel.UseVisualStyleBackColor = false;
             this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
-            // dataGridView1
+            // dgwReservationInformation
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 44);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(54, 31);
-            this.dataGridView1.TabIndex = 44;
-            this.dataGridView1.Visible = false;
+            this.dgwReservationInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwReservationInformation.Location = new System.Drawing.Point(15, 44);
+            this.dgwReservationInformation.Name = "dgwReservationInformation";
+            this.dgwReservationInformation.Size = new System.Drawing.Size(54, 31);
+            this.dgwReservationInformation.TabIndex = 44;
+            this.dgwReservationInformation.Visible = false;
+            // 
+            // dgwUserInformation
+            // 
+            this.dgwUserInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwUserInformation.Location = new System.Drawing.Point(250, 49);
+            this.dgwUserInformation.Name = "dgwUserInformation";
+            this.dgwUserInformation.Size = new System.Drawing.Size(62, 26);
+            this.dgwUserInformation.TabIndex = 45;
+            this.dgwUserInformation.Visible = false;
             // 
             // RezervationControlInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(347, 91);
+            this.ClientSize = new System.Drawing.Size(354, 96);
             this.Controls.Add(this.btnExcel);
             this.Controls.Add(this.btnXml);
             this.Controls.Add(this.btnJson);
             this.Controls.Add(this.lblInformation);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgwReservationInformation);
+            this.Controls.Add(this.dgwUserInformation);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RezervationControlInformation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RezervationControlInformation";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwReservationInformation)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwUserInformation)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,6 +147,7 @@ namespace YazılımMimarisiProje.UI.Forms
         private System.Windows.Forms.Button btnJson;
         private System.Windows.Forms.Button btnXml;
         private System.Windows.Forms.Button btnExcel;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgwReservationInformation;
+        private System.Windows.Forms.DataGridView dgwUserInformation;
     }
 }
