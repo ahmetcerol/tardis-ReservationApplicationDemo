@@ -11,6 +11,10 @@ namespace YazılımMimarisiProje.Entity.Abstract
  
   {
         protected ReservationInformation reservationInformation;
+        public ReservationInformation ReservationInformation
+        {
+            get { return reservationInformation; }
+        }
         
         public abstract string SetAccomodation();
         public abstract string SetTransportation();
@@ -19,6 +23,10 @@ namespace YazılımMimarisiProje.Entity.Abstract
         public abstract int SetPrice();
 
         protected Booker booker;
+        public Booker Booker
+        {
+            get { return booker; }
+        }
 
         public abstract string SetBookerName();
         public abstract string SetBookerSurname();

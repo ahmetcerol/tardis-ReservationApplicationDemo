@@ -71,7 +71,8 @@ namespace YazılımMimarisiProje.UI.Forms
             ReservationInformationDırector reservationInformationDırector = new ReservationInformationDırector();
             reservationInformationDırector.Uret(reservationBuilder);
 
-            string stringJSON = JsonConvert.SerializeObject(reservationInformation);
+            string stringJSON = JsonConvert.SerializeObject(reservationBuilder.ReservationInformation.ToString());
+            string _stringJSON = JsonConvert.SerializeObject(reservationBuilder.Booker.ToString());
             string path = @"C:\Users\hp\Desktop\reservation.json";
             if (File.Exists(path))
             {
@@ -79,6 +80,7 @@ namespace YazılımMimarisiProje.UI.Forms
                 using (var tw = new StreamWriter(path, true))
                 {
                     tw.WriteLine(stringJSON.ToString());
+                    tw.WriteLine(_stringJSON.ToString());
                     tw.Close();
                 }
             }
@@ -87,6 +89,7 @@ namespace YazılımMimarisiProje.UI.Forms
                 using (var tw = new StreamWriter(path, true))
                 {
                     tw.WriteLine(stringJSON.ToString());
+                    tw.WriteLine(_stringJSON.ToString());
                     tw.Close();
                 }
             }
