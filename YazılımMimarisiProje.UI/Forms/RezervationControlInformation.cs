@@ -104,8 +104,9 @@ namespace YazılımMimarisiProje.UI.Forms
             IReservationBuilder reservationBuilder = new XMLConcreteBuilder(reservationInformation, booker);
             ReservationInformationDırector reservationInformationDırector = new ReservationInformationDırector();
             reservationInformationDırector.Uret(reservationBuilder);
+            string path = @"C:\Users\hp\Desktop\reservation.xml";
 
-            Stream stream = new FileStream("BasicSerialization.xml", FileMode.Create, FileAccess.Write, FileShare.Write);
+            Stream stream = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.Write);
             XmlSerializer xmlserializer = new XmlSerializer(typeof(ReservationInformation));
             xmlserializer.Serialize(stream, reservationInformation);
             stream.Close();
